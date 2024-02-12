@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullScreen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>
+        Full Screen
+    </h1>
+
+    <button onclick="activateFullscreen(document.documentElement);">
+        GO Full Screen
+    </button>
+
+    <button onclick="deactiveFullscreen();">
+        Deactive Screen
+    </button>
+
+    <script>
+        function activateFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+
+            }
+        };
+
+        function deactiveFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+
+        if (navigator.onLine) {
+            console.log("Online");
+        }
+        else {
+            console.log(Offline);
+        }
+        console.log(navigator.connection);
+    </script>
+</body>
+
+</html>
